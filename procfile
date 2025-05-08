@@ -1,3 +1,1 @@
-web: gunicorn DevNotes.wsgi --log-file - 
-#or works good with external database
-web: python manage.py migrate && gunicorn DevNotes.wsgi
+web: python manage.py migrate && gunicorn myproject2.wsgi --log-file -
