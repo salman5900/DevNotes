@@ -3,4 +3,3 @@ gunicorn
 whitenoise
 django-widget-tweaks
 django-crispy-forms
-django-crispy-bootstrap5

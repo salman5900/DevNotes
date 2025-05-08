@@ -1,0 +1,173 @@
+*{
+    padding: 0px;
+    color: white;
+}
+body{
+  background-color: rgba(42, 42, 42, 1);
+}
+.navbar {
+    /* background-color: transparent; */
+    padding: 10px;
+    font-family: "Irish Grover", system-ui;
+    font-weight: 200;
+    font-style: normal;
+  }
+/* Navbar underline Animation */
+.nav-link {
+    position: relative;
+    display: inline-block;
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+  }
+  
+.nav-link::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 2px;
+    width: 0;
+    background-color: white;
+    transition: width 0.3s ease-in-out;
+  }
+  
+.nav-link:hover::after {
+    width: 100%;
+  }  
+#logo {
+    transition: filter 0.3s ease-in-out;
+    cursor: pointer; /* Optional: shows it's clickable */
+  }
+  
+#logo:hover {
+    filter: brightness(70%);
+  }
+  
+.Main-container{
+    padding: 0px;
+    display: flex;
+    justify-content: center;   /* centers horizontally */
+    align-items: center;       /* centers vertically */
+    height: 78vh;             /* takes full screen height */
+    text-align: center;        /* center-aligns text inside */
+    flex-direction: column;    /* optional: stack children vertically */
+    max-width: 800px;  /* or any width that looks good to you */
+    margin: 0 auto;     /* centers the block horizontally */
+    padding: 0 1rem;    /* optional: adds a little space on smaller screens */
+    text-align: center; /* center-aligns text */
+  }
+
+  /* form styles */
+.input-field {
+  width: 100%;
+  padding: 15px;
+  border: 2px solid #ccc;
+  border-radius: 8px; 
+  font-size: 16px; 
+  margin-bottom: 15px; 
+  transition: border-color 0.3s ease;
+  color: black; /* Change text color to black */
+}
+
+.input-field:focus {
+  border-color: #4CAF50;  /* Greenish focus */
+  outline: none;
+}
+
+button.btn {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100%;
+}
+
+button.btn:hover {
+  background-color: #45a049; 
+}
+
+/* notes css */
+.notes-section {
+  max-width: 700px;
+  margin-top: 200px;
+  padding: 20px;
+  background-color: transparent;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  min-height: 80vh;  /* Ensure it takes at least 80% of the viewport height */
+}
+
+/* Header styling */
+.notes-heading {
+  font-size: 2rem;
+  margin-bottom: 30px;
+  color: #fff;
+  border-bottom: 2px solid #444;
+  padding-bottom: 10px;
+}
+
+/* Note container */
+.note {
+  margin-bottom: 40px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #333;
+}
+
+/* Note title */
+.note-title {
+  font-size: 1.6rem;
+  margin-bottom: 0.5rem;
+}
+
+/* Link styling for note */
+.note-link {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s ease, transform 0.2s ease;
+}
+
+/* Hover effect for link */
+.note-link:hover {
+  color: #4CAF50;
+  transform: translateX(5px);
+}
+
+/* Active effect for link */
+.note-link:active {
+  color: #00ffff;
+  transform: scale(0.98);
+}
+
+/* Date formatting */
+.note-date {
+  color: #888;
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+}
+
+/* Content formatting */
+.note-content {
+  color: #ccc;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+/* When there are no notes, center the section */
+.no-notes {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  min-height: 60vh; /* Make sure it's at least 60% of the viewport height */
+}
+
+/* Spacing for empty state, pushing it down slightly */
+.spacing1 {
+  margin-top: 150px;
+}
