@@ -1,0 +1,29 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    All Notes
+{% endblock %}
+
+{% block content %}
+<section class="notes-section">
+    <h1 class="notes-heading">Notes</h1>
+
+    {% if notes %}
+        {% for note in notes %}
+        <article class="note">
+            <h2 class="note-title">
+                <a href="{% url 'notesEngine:note' slug=note.slug %}" class="note-link">
+                    {{ note.title }}
+                </a>
+            </h2>
+            <p class="note-date">{{ note.date }}</p>
+            <p class="note-content">{{ note.content|truncatewords:12 }}...</p>
+        </article>
+        {% endfor %}
+    {% else %}
+        <div class="no-notes">
+            <p class="note-content">No notes available. <a href="{% url "notesEngine:add_note" %}" class="note-link">Create a new note</a>.</p>
+        </div>
+    {% endif %}
+</section>
+{% endblock %}

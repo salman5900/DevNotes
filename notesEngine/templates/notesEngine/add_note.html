@@ -1,0 +1,16 @@
+{% extends "layout.html" %}
+
+{% block title %} 
+    Add Note 
+{% endblock %} 
+
+{% block content %}
+<div class="container" style="max-width: 600px; margin-top: 200px;">
+    <h2 class="mb-4 text-white">Add a New Note</h2>
+    <form method="POST" action="{% url 'notesEngine:add_note' %}" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form }}
+        <button type="submit" class="btn btn-success w-100 mt-3">Add Note</button>
+    </form>
+</div>
+{% endblock %}
