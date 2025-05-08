@@ -40,7 +40,6 @@ INSTALLED_APPS = [
     'widget_tweaks',
     'crispy_forms',
     'notesEngine',
-    'whitenoise.runserver_nostatic',
 ]
 
 MIDDLEWARE = [
@@ -128,7 +127,9 @@ MEDIA_ROOT = BASE_DIR / 'media'
 STATICFILES_DIRS = [
     BASE_DIR / 'static',
 ]
-STATICSTORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
 
