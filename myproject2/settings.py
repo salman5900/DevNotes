@@ -40,9 +40,11 @@ INSTALLED_APPS = [
     'widget_tweaks',
     'crispy_forms',
     'notesEngine',
+    'corsheaders',
 ]
 
 MIDDLEWARE = [
+    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
