@@ -10,6 +10,8 @@
     <h1 class="note-title">{{ note.title }}</h1>
     <p class="note-date">{{ note.date }}</p>
     <p class="note-content">{{ note.content }}</p>
+    <a href="{% url 'notesEngine:edit_note' slug=note.slug %}" class="btn btn-warning">Edit</a>
+    <a href="{% url 'notesEngine:delete_note' slug=note.slug %}" class="btn btn-danger">Delete</a>
     <a href="{% url 'notesEngine:all_notes' %}" class="btn btn-primary">GO Back</a>
 </section>
 </div>

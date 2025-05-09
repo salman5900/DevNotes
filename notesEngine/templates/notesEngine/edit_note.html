@@ -1,0 +1,15 @@
+{% extends "layout.html" %}
+
+{% block title %}Edit Note{% endblock %}
+
+{% block content %}
+<div class="spacing1 container" style="max-width: 600px; margin-top: 200px;">
+    <h2>Edit Note</h2>
+    <form method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="btn btn-success">Save Changes</button>
+        <a href="{% url 'notesEngine:note' slug=note.slug %}" class="btn btn-secondary" style="margin-top: 10px">Cancel</a>
+    </form>
+</div>
+{% endblock %}
